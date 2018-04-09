@@ -24,16 +24,18 @@ public class cManajer extends cUser {
       private mManajer manajerM;
       private vhomemanager managerV;
 
-  /*  public cManajer(vhomemanager managerV, mManajer manajerM) {
-      this.manajerM=manajer;
-      this.managerV=managerV;
-      logout();
-    }*/
 
     public cManajer(vloginmember login, mAdmin admin, mMember member, mManajer manajer) {
         super(login, admin, member, manajer);
+        logout();
     }
 
+    public cManajer(vhomemanager managerV, vloginmember login, mAdmin admin, mMember member, mManajer manajer) {
+        super(login, admin, member, manajer);
+       
+        this.managerV = managerV;
+    }
+    
 
     protected void logout() {
         managerV.tombolKeluar(new tombolKeluarx());

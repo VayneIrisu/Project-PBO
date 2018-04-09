@@ -28,16 +28,46 @@ public class vBarang2 extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
+        homeButton = new javax.swing.JButton();
+        stock = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/barang2.png"))); // NOI18N
         jLabel1.setText("jLabel1");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-180, -50, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-190, -60, -1, -1));
+
+        homeButton.setText("jButton1");
+        homeButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                homeButtonMouseClicked(evt);
+            }
+        });
+        getContentPane().add(homeButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 0, 130, 130));
+
+        stock.setText("jButton1");
+        stock.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                stockMouseClicked(evt);
+            }
+        });
+        getContentPane().add(stock, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 140, 250, 50));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void homeButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeButtonMouseClicked
+    vhalamanadmin home = new vhalamanadmin();    
+    home.setVisible(true);
+this.dispose();    // TODO add your handling code here:
+    }//GEN-LAST:event_homeButtonMouseClicked
+
+    private void stockMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_stockMouseClicked
+    vBarang1 az = new vBarang1();
+    az.setVisible(true);
+    this.dispose();// TODO add your handling code here:
+    }//GEN-LAST:event_stockMouseClicked
 
     /**
      * @param args the command line arguments
@@ -75,6 +105,8 @@ public class vBarang2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton homeButton;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton stock;
     // End of variables declaration//GEN-END:variables
 }

@@ -16,12 +16,19 @@ public class vloginmember extends javax.swing.JFrame {
     /**
      * Creates new form vloginmember
      */
+    
+        public static int cekLogin(String username, String password) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+        
     public vloginmember() {
         initComponents();
+        this.setVisible(true);
     }
 
     public void tombolLogin (ActionListener a){
         Login.addActionListener(a);
+        
     }
       public String username (){
         return username.getText();
@@ -63,7 +70,7 @@ public class vloginmember extends javax.swing.JFrame {
         jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-180, -50, -1, -1));
 
-        Login.setText("LOGIN");
+        Login.setText("jButton1");
         Login.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 LoginMouseClicked(evt);
@@ -74,13 +81,15 @@ public class vloginmember extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void LoginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LoginMouseClicked
-       
-    }//GEN-LAST:event_LoginMouseClicked
-
     private void usernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_usernameActionPerformed
+
+    private void LoginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LoginMouseClicked
+    vhomepagemember v = new vhomepagemember();
+    v.setVisible(true);
+    this.dispose();// TODO add your handling code here:
+    }//GEN-LAST:event_LoginMouseClicked
 
     /**
      * @param args the command line arguments

@@ -28,16 +28,48 @@ public class vBarang1 extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
+        homeButton = new javax.swing.JButton();
+        InputBarang = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/barang1.png"))); // NOI18N
         jLabel1.setText("jLabel1");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-180, -50, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-190, -60, -1, -1));
+
+        homeButton.setText("jButton1");
+        homeButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                homeButtonMouseClicked(evt);
+            }
+        });
+        getContentPane().add(homeButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 10, 130, 120));
+
+        InputBarang.setText("jButton1");
+        InputBarang.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                InputBarangMouseClicked(evt);
+            }
+        });
+        getContentPane().add(InputBarang, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 140, 250, 50));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void homeButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeButtonMouseClicked
+      vhalamanadmin v = new vhalamanadmin();
+      v.setVisible(true);
+      this.dispose();
+      // TODO add your handling code here:
+    }//GEN-LAST:event_homeButtonMouseClicked
+
+    private void InputBarangMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_InputBarangMouseClicked
+    vBarang2 a = new vBarang2();
+    a.setVisible(true);
+    this.dispose();
+    // TODO add your handling code here:
+    }//GEN-LAST:event_InputBarangMouseClicked
 
     /**
      * @param args the command line arguments
@@ -75,6 +107,8 @@ public class vBarang1 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton InputBarang;
+    private javax.swing.JButton homeButton;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

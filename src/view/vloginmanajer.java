@@ -11,17 +11,24 @@ import java.awt.event.ActionListener;
  *
  * @author Dhais Firmansyah
  */
-public class vloginmember extends javax.swing.JFrame {
+public class vloginmanajer extends javax.swing.JFrame {
 
     /**
      * Creates new form vloginmember
      */
-    public vloginmember() {
+    
+        public static int cekLogin(String username, String password) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+        
+    public vloginmanajer() {
         initComponents();
+        this.setVisible(true);
     }
 
     public void tombolLogin (ActionListener a){
         Login.addActionListener(a);
+        
     }
       public String username (){
         return username.getText();
@@ -39,14 +46,22 @@ public class vloginmember extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        Login = new javax.swing.JButton();
         username = new javax.swing.JTextField();
         password = new javax.swing.JPasswordField();
         Background = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        Login = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        Login.setText("LOGIN");
+        Login.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LoginMouseClicked(evt);
+            }
+        });
+        getContentPane().add(Login, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 570, 120, 40));
 
         username.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -63,19 +78,14 @@ public class vloginmember extends javax.swing.JFrame {
         jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-180, -50, -1, -1));
 
-        Login.setText("LOGIN");
-        Login.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                LoginMouseClicked(evt);
-            }
-        });
-        getContentPane().add(Login, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 570, 120, 40));
-
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void LoginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LoginMouseClicked
-       
+        vhomemanager v = new vhomemanager();
+        v.setVisible(true);
+        this.dispose();
+        
     }//GEN-LAST:event_LoginMouseClicked
 
     private void usernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameActionPerformed
@@ -99,20 +109,21 @@ public class vloginmember extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(vloginmember.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(vloginmanajer.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(vloginmember.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(vloginmanajer.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(vloginmember.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(vloginmanajer.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(vloginmember.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(vloginmanajer.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new vloginmember().setVisible(true);
+                new vloginmanajer().setVisible(true);
             }
         });
     }

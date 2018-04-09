@@ -35,13 +35,14 @@ public class vhomemanager extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         logout = new javax.swing.JButton();
+        rekapan = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/home manager.png"))); // NOI18N
         jLabel1.setText("jLabel1");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-180, -50, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-190, -50, -1, -1));
 
         logout.setOpaque(false);
         logout.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -55,6 +56,9 @@ public class vhomemanager extends javax.swing.JFrame {
             }
         });
         getContentPane().add(logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(1240, 10, 130, 120));
+
+        rekapan.setText("jButton1");
+        getContentPane().add(rekapan, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 140, 250, 50));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -107,5 +111,6 @@ public class vhomemanager extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JButton logout;
+    private javax.swing.JButton rekapan;
     // End of variables declaration//GEN-END:variables
 }

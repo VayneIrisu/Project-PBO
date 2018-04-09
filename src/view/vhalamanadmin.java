@@ -27,26 +27,30 @@ public class vhalamanadmin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         Logout = new javax.swing.JButton();
         barang = new javax.swing.JButton();
         form = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1366, 768));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/HalamanAdmin.png"))); // NOI18N
+        jLabel2.setText("jLabel2");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-90, -30, -1, -1));
+
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "ID Pesanan", "Nama Pemesan", "Nama Barang", "Jumlah Barang", "Merk Barang", "Total Harga", "Keterangan"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
@@ -63,25 +67,21 @@ public class vhalamanadmin extends javax.swing.JFrame {
                 LogoutActionPerformed(evt);
             }
         });
-        getContentPane().add(Logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 703, 210, 50));
+        getContentPane().add(Logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 690, 210, 50));
 
         barang.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 barangMouseClicked(evt);
             }
         });
-        getContentPane().add(barang, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, 220, 50));
+        getContentPane().add(barang, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 220, 50));
 
         form.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 formActionPerformed(evt);
             }
         });
-        getContentPane().add(form, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, 240, 50));
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/HalamanAdmin.png"))); // NOI18N
-        jLabel2.setText("jLabel2");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-80, -20, -1, -1));
+        getContentPane().add(form, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 400, 240, 50));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

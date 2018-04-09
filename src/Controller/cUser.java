@@ -49,7 +49,25 @@ public class cUser {
             String username = login.username();
             String password = login.password();
             boolean in = true;
-            
+            if (in) {
+                try {
+                    if (manajer.cekLogin(username, password)) {
+                        if (manajer.cekLevel(username, password)) {
+                            vhomemanager v = new vhomemanager();
+                            mManajer m = new mManajer();
+                            vloginmember vlog = new vloginmember();
+                            mAdmin madm = new mAdmin();
+                            mMember mmemb = new mMember();
+                            cManajer c;
+                            c = new cManajer(v,vlog,madm,mmemb,m);
+                            login.dispose();
+                            System.out.println("yes");
+                        }
+                    }
+                } catch (SQLException ex) {
+                    System.err.println("Ada kesalahan " + ex);
+                }
+            }
         }
     }
     
