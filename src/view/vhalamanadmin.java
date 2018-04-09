@@ -76,6 +76,11 @@ public class vhalamanadmin extends javax.swing.JFrame {
         });
         getContentPane().add(barang, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 220, 50));
 
+        form.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                formMouseClicked(evt);
+            }
+        });
         form.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 formActionPerformed(evt);
@@ -105,6 +110,12 @@ public class vhalamanadmin extends javax.swing.JFrame {
         brg1.setVisible(true);
         this.dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_barangMouseClicked
+
+    private void formMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseClicked
+        DataFormulir df = new DataFormulir();
+        df.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_formMouseClicked
 
     /**
      * @param args the command line arguments
