@@ -27,62 +27,71 @@ public class vhomepagemember extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        Logout = new javax.swing.JButton();
+        pesan = new javax.swing.JButton();
+        editProfil = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1366, 768));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        Logout.setText("jButton3");
+        Logout.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LogoutMouseClicked(evt);
+            }
+        });
+        Logout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LogoutActionPerformed(evt);
+            }
+        });
+        getContentPane().add(Logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 550, 210, 40));
+
+        pesan.setText("jButton1");
+        pesan.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pesanMouseClicked(evt);
+            }
+        });
+        getContentPane().add(pesan, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, 210, 40));
+
+        editProfil.setText("jButton2");
+        editProfil.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                editProfilMouseClicked(evt);
+            }
+        });
+        getContentPane().add(editProfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, 220, 50));
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/Homepage.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-
-        jButton1.setText("jButton1");
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
-            }
-        });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 285, 210, 30));
-
-        jButton2.setText("jButton2");
-        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton2MouseClicked(evt);
-            }
-        });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(129, 420, 200, 30));
-
-        jButton3.setText("jButton3");
-        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton3MouseClicked(evt);
-            }
-        });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(129, 555, 200, 40));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-100, -10, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+    private void pesanMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pesanMouseClicked
         vpemesanan1 b = new vpemesanan1();
         b.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_jButton1MouseClicked
+    }//GEN-LAST:event_pesanMouseClicked
 
-    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+    private void editProfilMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_editProfilMouseClicked
         veditprofile c = new veditprofile();
         c.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_jButton2MouseClicked
+    }//GEN-LAST:event_editProfilMouseClicked
 
-    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
+    private void LogoutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LogoutMouseClicked
         vloginmember d = new vloginmember();
         d.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_jButton3MouseClicked
+    }//GEN-LAST:event_LogoutMouseClicked
+
+    private void LogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogoutActionPerformed
+            // TODO add your handling code here:
+    }//GEN-LAST:event_LogoutActionPerformed
 
     /**
      * @param args the command line arguments
@@ -120,9 +129,9 @@ public class vhomepagemember extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton Logout;
+    private javax.swing.JButton editProfil;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton pesan;
     // End of variables declaration//GEN-END:variables
 }

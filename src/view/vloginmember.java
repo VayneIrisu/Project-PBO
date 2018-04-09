@@ -5,6 +5,8 @@
  */
 package view;
 
+import java.awt.event.ActionListener;
+
 /**
  *
  * @author Dhais Firmansyah
@@ -18,6 +20,16 @@ public class vloginmember extends javax.swing.JFrame {
         initComponents();
     }
 
+    public void tombolLogin (ActionListener a){
+        Login.addActionListener(a);
+    }
+      public String username (){
+        return username.getText();
+    }
+    
+    public String password (){
+        return password.getText();
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -27,32 +39,48 @@ public class vloginmember extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
+        username = new javax.swing.JTextField();
+        password = new javax.swing.JPasswordField();
         Background = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        Login = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setText("LOGIN");
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
+        username.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                usernameActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 550, -1, -1));
+        getContentPane().add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 430, 360, -1));
+        getContentPane().add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 470, 360, -1));
 
-        Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/login member.png"))); // NOI18N
         Background.setText("jLabel1");
         getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(-190, -50, -1, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/login.png"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-180, -50, -1, -1));
+
+        Login.setText("LOGIN");
+        Login.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LoginMouseClicked(evt);
+            }
+        });
+        getContentPane().add(Login, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 570, 120, 40));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-        vhomepagemember a = new vhomepagemember();
-        a.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_jButton1MouseClicked
+    private void LoginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LoginMouseClicked
+       
+    }//GEN-LAST:event_LoginMouseClicked
+
+    private void usernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_usernameActionPerformed
 
     /**
      * @param args the command line arguments
@@ -91,6 +119,9 @@ public class vloginmember extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Background;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton Login;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPasswordField password;
+    private javax.swing.JTextField username;
     // End of variables declaration//GEN-END:variables
 }

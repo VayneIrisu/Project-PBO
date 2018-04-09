@@ -27,15 +27,32 @@ public class vpemesanan1 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         Background = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "ID Pesanan", "Nama Pemesan", "Nama Barang", "Merk Barang", "Alamat", "Jumlah", "Keterangan"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 257, 1110, 430));
+
         Background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/Create pemesanan.png"))); // NOI18N
         Background.setText("jLabel1");
-        getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(-190, -50, -1, -1));
+        getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(-180, -50, -1, -1));
 
         jButton1.setText("jButton1");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -92,5 +109,7 @@ public class vpemesanan1 extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Background;
     private javax.swing.JButton jButton1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 }
