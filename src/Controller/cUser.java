@@ -68,7 +68,8 @@ public class cUser {
                             mAdmin madm = new mAdmin();
                             mMember mmemb = new mMember();
                             cManajer c;
-                            c = new cManajer(m,v,vlog,m,v);
+                            c = new cManajer(m,v,vlog);
+                            vmanajer.setVisible(true);
                             login.dispose();
                             System.out.println("yes");
                         }

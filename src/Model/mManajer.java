@@ -12,13 +12,14 @@ import java.sql.SQLException;
  *
  * @author Dhais Firmansyah
  */
-public class mManajer extends mCekLogin{
-private int level;
-private int id;
+public class mManajer extends mCekLogin {
 
-public mManajer() throws SQLException{
-super();
-} 
+    private int level;
+    private int id;
+
+    public mManajer() throws SQLException {
+//        super();
+    }
 
     public int getId() {
         return id;
@@ -44,19 +45,20 @@ super();
         this.password = password;
     }
 
-
-
     @Override
     public boolean cekLogin(String username, String password) throws SQLException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        String sql = "select * from user where username = '" + username + "' and password = '" + password + "'";
+        ResultSet rs = conn.getResult(sql);
+        return rs.last();
     }
 
     @Override
     public boolean cekLevel(String username, String password) throws SQLException {
-        String sql = "select * from user where username = '" + username + "' and pasword = '" + password + "'";
+        String sql = "select * from user where username = '" + username + "' and password = '" + password + "'";
         ResultSet rs = conn.getResult(sql);
         rs.next();
         id = rs.getInt("idUser");
-        return rs.getInt("level") == 3;   }
-    
+        return rs.getInt("level") == 3;
+    }
+
 }

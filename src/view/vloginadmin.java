@@ -48,9 +48,9 @@ public class vloginadmin extends javax.swing.JFrame {
 
         username = new javax.swing.JTextField();
         password = new javax.swing.JPasswordField();
-        Login = new javax.swing.JButton();
         Background = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        Login = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -62,6 +62,13 @@ public class vloginadmin extends javax.swing.JFrame {
         });
         getContentPane().add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 430, 360, -1));
         getContentPane().add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 470, 360, -1));
+
+        Background.setText("jLabel1");
+        getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(-190, -50, -1, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/login.png"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-180, -50, -1, -1));
 
         Login.setText("jButton1");
         Login.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -76,13 +83,6 @@ public class vloginadmin extends javax.swing.JFrame {
         });
         getContentPane().add(Login, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 570, 120, 40));
 
-        Background.setText("jLabel1");
-        getContentPane().add(Background, new org.netbeans.lib.awtextra.AbsoluteConstraints(-190, -50, -1, -1));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/login.png"))); // NOI18N
-        jLabel1.setText("jLabel1");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-180, -50, -1, -1));
-
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -91,9 +91,9 @@ public class vloginadmin extends javax.swing.JFrame {
     }//GEN-LAST:event_usernameActionPerformed
 
     private void LoginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LoginMouseClicked
-//    vhalamanadmin v = new vhalamanadmin();
-//    v.setVisible(true);
-//    this.dispose();// TODO add your handling code here:
+    vhalamanadmin v = new vhalamanadmin();
+    v.setVisible(true);
+    this.dispose();// TODO add your handling code here:
     }//GEN-LAST:event_LoginMouseClicked
 
     private void LoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginActionPerformed

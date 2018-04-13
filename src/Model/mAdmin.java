@@ -50,7 +50,7 @@ super();
 
     @Override
     public boolean cekLogin(String username, String password) throws SQLException {
-       String sql = "select * from user where username = '" + username + "' and password = '" + password + "'";
+        String sql = "select * from user where username = '" + username + "' and password = '" + password + "'";
         ResultSet rs = conn.getResult(sql);
         return rs.last();
     }

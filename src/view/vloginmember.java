@@ -76,6 +76,11 @@ public class vloginmember extends javax.swing.JFrame {
                 LoginMouseClicked(evt);
             }
         });
+        Login.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LoginActionPerformed(evt);
+            }
+        });
         getContentPane().add(Login, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 570, 120, 40));
 
         pack();
@@ -86,10 +91,14 @@ public class vloginmember extends javax.swing.JFrame {
     }//GEN-LAST:event_usernameActionPerformed
 
     private void LoginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LoginMouseClicked
-    vhomepagemember v = new vhomepagemember();
-    v.setVisible(true);
-    this.dispose();// TODO add your handling code here:
+//    vhomepagemember v = new vhomepagemember();
+//    v.setVisible(true);
+//    this.dispose();// TODO add your handling code here:
     }//GEN-LAST:event_LoginMouseClicked
+
+    private void LoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_LoginActionPerformed
 
     /**
      * @param args the command line arguments
