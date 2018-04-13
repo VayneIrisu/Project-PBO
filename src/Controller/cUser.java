@@ -40,8 +40,17 @@ public class cUser {
         this.admin = admin;
         this.member = member;
         this.manajer = manajer;
+       // login.tombolLogin(new loginListeners());
+    }
+
+    public cUser(vloginmember login, mManajer manajer, vhomemanager vmanajer) {
+        this.login = login;
+        this.manajer = manajer;
+        this.vmanajer = vmanajer;
         login.tombolLogin(new loginListeners());
     }
+    
+    
         class loginListeners implements ActionListener {
 
         @Override
@@ -59,7 +68,7 @@ public class cUser {
                             mAdmin madm = new mAdmin();
                             mMember mmemb = new mMember();
                             cManajer c;
-                            c = new cManajer(v,vlog,madm,mmemb,m);
+                            c = new cManajer(m,v,vlog,m,v);
                             login.dispose();
                             System.out.println("yes");
                         }

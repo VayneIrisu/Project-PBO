@@ -30,11 +30,14 @@ public class cManajer extends cUser {
         logout();
     }
 
-    public cManajer(vhomemanager managerV, vloginmember login, mAdmin admin, mMember member, mManajer manajer) {
-        super(login, admin, member, manajer);
-       
+    public cManajer(mManajer manajerM, vhomemanager managerV, vloginmember login, mManajer manajer, vhomemanager vmanajer) {
+        super(login, manajer, vmanajer);
+        this.manajerM = manajerM;
         this.managerV = managerV;
+        logout();
     }
+
+
     
 
     protected void logout() {
